@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { Router, Link } from "@reach/router";
 import Results from './Results';
 import Details from './Details';
+import SearchParams from './SearchParams';
 
 class App extends React.Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class App extends React.Component {
     this.state = {
       pets: []
     };
+
   }
 
   render() {
@@ -27,6 +29,7 @@ class App extends React.Component {
         <Router>
           <Results path="/"></Results>
           <Details path="/details/:id"></Details>
+          <SearchParams path="/search-params"></SearchParams>
         </Router>
       </div>
     )

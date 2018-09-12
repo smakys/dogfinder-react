@@ -3,6 +3,7 @@
 import React from 'react';
 import pf from 'petfinder-client'
 import { navigate } from '@reach/router';
+import Carousel from './Carousel';
 
 const petfinder = pf({
   key: process.env.API_KEY,
@@ -18,7 +19,7 @@ class Details extends React.Component {
   //   };
   // }
 
-  // possible with - babel-plugin-transform-class-properties
+  // possible with babel-plugin-transform-class-properties
   state = {
     loading: true
   };
@@ -60,13 +61,16 @@ class Details extends React.Component {
       return <h1>loading ...</h1>;
     }
 
-    const { name, animal, breed, location, description } = this.state;
+    const { name, animal, breed, location, description, media } = this.state;
 
     return (
       <div className="details">
-        <h1>{name}</h1>
-        <h2>{animal} - {breed} - {location}</h2>
-        <p>{description}</p>
+        <Carousel media={media}></Carousel>
+        <div>
+          <h1>{name}</h1>
+          <h2>{animal} - {breed} - {location}</h2>
+          <p>{description}</p>
+        </div>
       </div>
     )
   }
