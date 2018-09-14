@@ -17,17 +17,12 @@ class Pet extends React.Component {
       photos = media.photos.photo.filter(photo => photo['@size'] === 'pn');
     }
 
-    let photo;
-    if (photos.length) {
-      photo = <img src={photos[0].value} alt="{name}" />;
-    } else {
-      photo = '';
-    }
+    let hero = photos.length ? photos[0].value : 'http://placecorgi.com/300/300';
 
     return (
       <Link to={`/details/${id}`} className="pet">
         <div className="image-container">
-          {photo}
+          <img src={hero} alt="{name}" />
         </div>
         <div className="info">
           <h1>{name}</h1>
