@@ -1,14 +1,25 @@
 // Details.js
 
 import React from 'react';
-import pf from 'petfinder-client'
+import Loadable from 'react-loadable';
 import { navigate } from '@reach/router';
+import pf from 'petfinder-client'
 import Carousel from './Carousel';
 import Modal from './Modal';
+
 
 const petfinder = pf({
   key: process.env.API_KEY,
   secret: process.env.API_SECRET
+});
+
+const LoadableModalContent = Loadable({
+  loader: () => import('./AdoptModalContent'),
+  loading() {
+    return (
+      <h1>Loading adopt modal content...</h1>
+    )
+  }
 });
 
 class Details extends React.Component {
@@ -23,7 +34,7 @@ class Details extends React.Component {
   // possible with babel-plugin-transform-class-properties
   state = {
     loading: true,
-    showModal: true
+    showModal: false
   };
 
   toggleModal = () => {
@@ -82,11 +93,7 @@ class Details extends React.Component {
           {
             showModal ? (
               <Modal>
-                <h1>Would you like to adopt {name}</h1>
-                <div className="buttons">
-                  <button onClick={this.toggleModal}>Yes</button>
-                  <button onClick={this.toggleModal}>No</button>
-                </div>
+                <LoadableModalContent></LoadableModalContent>
               </Modal>
             ) : null
           }
