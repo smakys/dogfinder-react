@@ -1,6 +1,8 @@
+import { CHANGE_ANIMAL } from '../actions';
+
 export default function setAnimal(animal) {
   return {
-    type: 'SET_ANIMAL',
+    type: CHANGE_ANIMAL,
     payload: animal
   }
 }

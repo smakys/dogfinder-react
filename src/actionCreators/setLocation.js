@@ -1,6 +1,8 @@
+import { CHANGE_LOCATION } from '../actions';
+
 export default function setLocation(payload) {
   return {
-    type: 'SET_LOCATION',
+    type: CHANGE_LOCATION,
     payload
   }
 }
