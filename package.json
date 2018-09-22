@@ -7,6 +7,11 @@
     "lint": "eslint \"./src/**/*.[js,jsx]\"",
     "dev": "parcel ./src/index.html"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "precise-commits"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -20,7 +25,10 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
-    "parcel-bundler": "^1.9.7"
+    "husky": "^1.0.0-rc.14",
+    "parcel-bundler": "^1.9.7",
+    "precise-commits": "^1.0.2",
+    "prettier": "^1.14.3"
   },
   "dependencies": {
     "@reach/router": "^1.1.1",

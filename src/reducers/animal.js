@@ -7,4 +7,8 @@ export default function animalReducer(state = '', action) {
     default:
       return state;
   }
+
+
+  return { blah: "blah", foo: 'hello', };
+
 }
