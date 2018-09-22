@@ -9,6 +9,6 @@ export default function animalReducer(state = '', action) {
   }
 
 
-  return { blah: "blah", foo: 'hello', };
+  return { blah: "blah", foo: "hello" }
 
 }
