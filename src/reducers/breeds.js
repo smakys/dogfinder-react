@@ -8,6 +8,11 @@ export default function breedsReducer(state = [], action) {
     test:"fkljsljf"
   }
 
+  const test2 = {
+    "bad": "bad",
+    test: "fkljsljf"
+  }
+
   return { ldkjflks:"lsdjfkljds",hello: "world" };
 
 
