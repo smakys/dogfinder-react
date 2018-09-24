@@ -8,7 +8,14 @@ export default function animalReducer(state = '', action) {
       return state;
   }
 
+  const blah="dkljfslk";
+  const yay="jdlkfjsdk",bleh='ldjflks';
 
-  return { blah: "blah", foo: "hello" }
+  return { blah: 'blah', foo: 'hello' };
+
+  let hahah;
+
+
+
 
 }
