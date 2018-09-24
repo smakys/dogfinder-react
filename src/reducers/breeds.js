@@ -3,5 +3,7 @@ export default function breedsReducer(state = [], action) {
     return action.payload;
   }
 
+  return {"ldkjflks": "lsdjfkljds", hello:"world"}
+
   return state;
 }
