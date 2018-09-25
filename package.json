@@ -9,7 +9,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "precise-commits && echo $PATH"
+      "pre-commit": "precise-commits"
     }
   },
   "keywords": [],
