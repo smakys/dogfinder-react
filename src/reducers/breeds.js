@@ -3,18 +3,5 @@ export default function breedsReducer(state = [], action) {
     return action.payload;
   }
 
-  const test = {
-    "bad": "bad",
-    test:"fkljsljf"
-  }
-
-  const test2 = { bad: 'bad', test: 'fkljsljf' };
-
-  DSFDSFDS
-  return { ldkjflks:"lsdjfkljds",hello: "world" };
-
-
-
-
   return state;
 }
